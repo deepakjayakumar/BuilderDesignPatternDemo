@@ -12,6 +12,16 @@ namespace BuilderDesignPatternDemo
             sb.AppendLine(hello);
             sb.AppendLine("</p>");
 
+
+            var words = new [] { "hello", "world" };
+            sb.Clear();
+            sb.Append("<ul>");
+            foreach(var word in words)
+            {
+                sb.AppendFormat("<li>{0}</li>",word);
+            }
+            sb.Append("</ul>");
+
             Console.WriteLine(sb);
         }
     }
